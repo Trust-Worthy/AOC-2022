@@ -31,7 +31,7 @@ def calculate_score(filename):
             if my_throw == "X": # X means I need to lose
                 if opponent_throw == "A": # A is rock
                     round_score += 3 # is opponent throws rock I would throw scissors two lose
-                if opponent_throw == "B":
+                elif opponent_throw == "B":
                     round_score += 1 # if opponent throws paper I would throw rock to lose
                 else:
                     round_score += 2 # if opponent throws scissors I would throw paper to lose   
@@ -41,20 +41,20 @@ def calculate_score(filename):
                     round_score += 1 
                 elif opponent_throw == "B":
                     round_score += 2
-                else:
+                else: # opp throw is C which is 3 points
                     round_score += 3
                 round_score += 3 # drawing a round
                 total_score += round_score
             else: # Z means I need to win
                 if opponent_throw == "A": # A is rock
                     round_score += 2 
-                if opponent_throw == "B":
+                elif opponent_throw == "B":
                     round_score += 3
                 else:
                     round_score += 1
                 round_score += 6 # winning a round 
                 total_score += round_score
-                
+
         return total_score
 
 def main():
