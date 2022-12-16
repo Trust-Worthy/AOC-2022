@@ -44,7 +44,7 @@ def calculate_score(filename):
         return total_score
 
 def main():
-    total_score = calculate_score("rock_paper.txt")
+    total_score = calculate_score("Test_input/rock_paper.txt")
     print(total_score)
 
 if __name__ == "__main__":
