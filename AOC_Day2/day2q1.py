@@ -29,6 +29,11 @@ def calculate_score(filename):
             else:
                 round_score + 3
 
-            if opponent_throw == "A" and my_throw == "Z":
+            if opponent_throw == "A" and my_throw == "Z" or opponent_throw == "B" and my_throw == "X" or opponent_throw == "C" and my_throw == "Y":
+                total_score += round_score
+            elif my_throw == "X" and opponent_throw == "B" or my_throw == "Y" and opponent_throw == "A" or my_throw == "Z" and opponent_throw == "B":
+                total_score += round_score + 6 # six points for a win
+            elif my_throw == opponent_throw:
+                total_score += round_score + 3 #3 points for a draw
 
 
