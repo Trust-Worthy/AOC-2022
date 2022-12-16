@@ -39,7 +39,7 @@ def calculate_score(filename):
             elif my_throw == "Y": # Y means I need to draw
                 if opponent_throw == "A": # A is rock
                     round_score += 1 
-                if opponent_throw == "B":
+                elif opponent_throw == "B":
                     round_score += 2
                 else:
                     round_score += 3
@@ -54,10 +54,11 @@ def calculate_score(filename):
                     round_score += 1
                 round_score += 6 # winning a round 
                 total_score += round_score
+                
         return total_score
 
 def main():
-    total_score = calculate_score("Test_input/basic_test_input.txt")
+    total_score = calculate_score("Test_Input/rock_paper.txt")
     print(total_score)
 
 if __name__ == "__main__":
