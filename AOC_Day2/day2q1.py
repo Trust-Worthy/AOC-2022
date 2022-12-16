@@ -13,9 +13,9 @@ def calculate_score(filename):
     plus the score for the outcome of the round 
     (0 if you lost, 3 if the round was a draw, and 6 if you won).
     """
-    total_score = 0
+    
     with open(filename) as file:
-
+        total_score = 0
         for line in file:
             round_score = 0
             line.strip()
@@ -35,5 +35,14 @@ def calculate_score(filename):
                 total_score += round_score + 6 # six points for a win
             elif my_throw == opponent_throw:
                 total_score += round_score + 3 #3 points for a draw
+
+        return total_score
+
+def main():
+    total_score = calculate_score("basic_test_input.txt")
+    print(total_score)
+
+if __name__ == "__main__":
+    main()
 
 
