@@ -58,8 +58,10 @@ def calculate_score(filename):
         return total_score
 
 def main():
-    total_score = calculate_score("Test_Input/rock_paper.txt")
-    print(total_score)
+    # total_score = calculate_score("Test_Input/rock_paper.txt")
+    # print(total_score)
+
+    print(ord("A"))
 
 if __name__ == "__main__":
     main()
