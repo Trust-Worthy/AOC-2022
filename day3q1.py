@@ -19,13 +19,13 @@ def priorities_rucksack(filename):
     with open(filename) as file:
         compartment1 = ""
         compartment2 = ""
-        comp_dict = {}
+        
         for rucksack in file:
             rucksack.strip()
             rucksack.split()
             compartment1 = rucksack[:len(rucksack)//2]
             compartment2 = rucksack[len(rucksack)//2:len(rucksack)-1]
-
+            comp_dict = {}
             for char in compartment1:
                 if char not in comp_dict:
                     comp_dict[char] = 1
@@ -41,7 +41,7 @@ def priorities_rucksack(filename):
 
 
 def main():
-    print(priorities_rucksack("Test_Input/basic_rucksack.txt"))
+    print(priorities_rucksack("Test_Input/rucksack_input.txt"))
 
 
 
