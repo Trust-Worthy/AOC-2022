@@ -1,4 +1,8 @@
 def priority_val(char):
+    """
+    This function takes in a character and returns a number. a = 1 (through lower z) and A = 27
+    (through upper Z)
+    """
 
     if char.islower() == True:
         return ord(char) - 96
@@ -7,6 +11,10 @@ def priority_val(char):
     
 
 def priorities_rucksack(filename):
+    """
+    This function reads the input data, breaks up each line into two compartments,
+    and calculates the total of the duplicate character in each rucksack.
+    """
     priority_sum = 0
     with open(filename) as file:
         compartment1 = ""
@@ -23,7 +31,15 @@ def priorities_rucksack(filename):
             for i,j in zip(compartment1,compartment2):
                 if i == j:
                     priority_sum += priority_val(i)
+    
+    return priority_sum
+
+
+def main():
+    
 
 
 
+if __name__ == "__main__":
+    main()
             
