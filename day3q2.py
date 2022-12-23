@@ -12,7 +12,7 @@ def priority_val(char):
 
 def group_elf_rucksacks(filename):
     """
-    This function 
+    This function reads all the lines in the file and groups those lines in groups of three.
     """
     priority_sum = 0
     elf_group = []
