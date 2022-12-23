@@ -33,7 +33,7 @@ def is_superset(filename):
     return times
 
 def main():
-    print(is_superset("Test_Input/day4_test_input.txt"))
+    print(is_superset("Test_Input/day4_real_input.txt"))
 
 if __name__ == "__main__":
     main()
