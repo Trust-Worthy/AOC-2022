@@ -13,6 +13,8 @@ def priority_val(char):
 def group_elf_rucksacks(filename):
     """
     This function reads all the lines in the file and groups those lines in groups of three.
+    These three lines are then converted into sets.
+    Then I look through the first set to see what character appears in all three sets.
     """
     priority_sum = 0
     elf_group = []
