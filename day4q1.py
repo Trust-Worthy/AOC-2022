@@ -26,7 +26,7 @@ def is_superset(filename):
                     range2_set = set()
                     for num in range(start_range2,end_range2+1):
                         range2_set.add(num)
-            if range1_set == range2_set:
+            if range1_set == range2_set: # I had to add the case where both of the ranges were the exact same.
                 times += 1
             else:
                 if range1_set.issubset(range2_set):
