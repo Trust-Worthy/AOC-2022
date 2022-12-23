@@ -28,7 +28,7 @@ def is_superset(filename):
                         range2_set.add(num)
             if range1_set.issuperset(range2_set):
                 times += 1
-            if range2_set.issubset(range1_set):
+            if range2_set.issuperset(range1_set):
                 times += 1
     return times
 
