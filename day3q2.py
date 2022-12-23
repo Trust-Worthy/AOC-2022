@@ -19,19 +19,30 @@ def group_elf_rucksacks(filename):
     file = open(filename)
 
     content = file.readlines()
+    for line in content:
+        line = line.strip()
     count = 0
     num = len(content)
     while count < num:
         elf_group.append(content[count:count+3])
         count += 3
 
+    for list in elf_group:
+        set1 = set(list[0])
+        set2 = set(list[1])
+        set3 = set(list[2])
+        for char in set1:
+            if char != "\n":
+                if char in set2 and char in set3:
+                    priority_sum += priority_val(char)
+
     
     file.close()       
-    return elf_group
+    return priority_sum
 
 
 def main():
-    print(group_elf_rucksacks("Test_Input/basic_rucksack.txt"))
+    print(group_elf_rucksacks("Test_Input/rucksack_input.txt"))
 
 
 
