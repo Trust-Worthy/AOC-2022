@@ -16,17 +16,9 @@ def group_elf_rucksacks(filename):
     """
     priority_sum = 0
     with open(filename) as file:
-
-        count = 0
-        elf_group = []
-        for rucksack in file:
+        elf_group.append([next(file) for x in range(3)])
             
-            for char in rucksack:
-                if count == 3:
-                    break
-                elif char == "\n":
-                    elf_group.append(rucksack)
-                    count += 1
+    
                     
     return elf_group
 
