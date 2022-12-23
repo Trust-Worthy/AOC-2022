@@ -26,10 +26,13 @@ def is_superset(filename):
                     range2_set = set()
                     for num in range(start_range2,end_range2+1):
                         range2_set.add(num)
-            if range1_set.issuperset(range2_set):
+            if range1_set == range2_set:
                 times += 1
-            if range2_set.issuperset(range1_set):
-                times += 1
+            else:
+                if range1_set.issubset(range2_set):
+                    times += 1
+                if range2_set.issubset(range1_set):
+                    times += 1
     return times
 
 def main():
