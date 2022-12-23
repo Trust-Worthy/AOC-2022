@@ -12,14 +12,21 @@ def priority_val(char):
 
 def group_elf_rucksacks(filename):
     """
-    
+    This function 
     """
     priority_sum = 0
-    with open(filename) as file:
-        elf_group.append([next(file) for x in range(3)])
-            
+    elf_group = []
+    file = open(filename)
+
+    content = file.readlines()
+    count = 0
+    num = len(content)
+    while count < num:
+        elf_group.append(content[count:count+3])
+        count += 3
+
     
-                    
+    file.close()       
     return elf_group
 
 
