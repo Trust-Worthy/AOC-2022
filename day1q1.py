@@ -26,7 +26,7 @@ def get_data(filename):
 
 
 def main():
-    answer = get_data("big_input.txt")
+    answer = get_data("Test_Input/big_input.txt")
     print(answer)
     #get_data("small_input.txt")
 
